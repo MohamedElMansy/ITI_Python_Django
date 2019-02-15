@@ -9,6 +9,10 @@ class Country(models.Model):
     country_img = models.ImageField(default="default.jpeg")
     country_rate = models.IntegerField(null=True)
 
+    def __str__(self):
+        return self.country_name
+
+
 class City (models.Model):
     city_id = models.IntegerField(primary_key=True)
     city_name = models.CharField(max_length=100)

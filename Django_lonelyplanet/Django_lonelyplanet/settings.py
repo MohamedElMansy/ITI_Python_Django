@@ -53,7 +53,7 @@ ROOT_URLCONF = 'Django_lonelyplanet.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "home_site/templetes")],
+        'DIRS': [os.path.join(BASE_DIR, "home_site/template")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,7 +76,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'lonelyplanet',
         'USER': 'root',
-        'PASSWORD': 'Os@12345',
+        'PASSWORD': 'Mohamed12345!',
         'HOST': 'localhost',
         'PORT': '3306',
 
