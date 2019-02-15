@@ -17,6 +17,29 @@ class City (models.Model):
     city_img = models.ImageField(default="default.jpeg")
     city_rate = models.IntegerField(null=True)
     country_id = models.ForeignKey(Country)
+	
+
+
+class Experience(models.Model):
+    exp_id= models.AutoField(primary_key=True)
+    exp_title=models.CharField(max_length=200,null=False)
+    exp_description=models.CharField(max_length=250,null=False)
+    exp_img=models.CharField(max_length=200)
+    city=models.ForeignKey(City)
+
+class Sights(models.Model):
+    sight_id=models.AutoField(primary_key=True)
+    sight_name=models.CharField(max_length=200,null=False)
+    sight_img=models.CharField(max_length=200)
+    city=models.ForeignKey(City)
+
+class Comments(models.Model):
+    comment_id=models.AutoField(primary_key=True)
+    comment_description=models.CharField(max_length=250)
+   # user=models.ForeignKey(Users)
+    city=models.ForeignKey(City)
+    exp=models.ForeignKey(Experience)
+	
 
 
 
