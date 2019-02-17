@@ -1,0 +1,23 @@
+<html>
+<head>
+<body>
+{% load static %}
+{% static "" as baseUrl %}
+
+<h3>
+    {{ct.country_name}}
+    {{ct.country_desc}}
+</h3>
+
+<img src="{{ baseUrl }}/{{ct.country_img}}">
+
+{% for city in city %}
+  <h5>    {{city.city_name}}     </h5>
+
+ {% endfor %}
+
+</body>
+
+</head>
+
+</html>

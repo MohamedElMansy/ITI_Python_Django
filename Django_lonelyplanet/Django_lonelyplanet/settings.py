@@ -53,7 +53,7 @@ ROOT_URLCONF = 'Django_lonelyplanet.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "home_site/template")],
+        'DIRS': [os.path.join(BASE_DIR, "home_site/templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,7 +76,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'lonelyplanet',
         'USER': 'root',
-        'PASSWORD': 'Mohamed12345!',
+        'PASSWORD': 'Os@12345',
         'HOST': 'localhost',
         'PORT': '3306',
 
@@ -117,4 +117,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = os.path.join(BASE_DIR, 'home_site/static/')

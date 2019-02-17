@@ -14,4 +14,11 @@ def show_city(request,city_id):
     sight = Sights.objects.filter(city_id=city_id)
     context = {'city': single_city,'sights':sight,'countries': all_countris}
     return render(request, 'single_city.html', context)
+# Create your views here.
+def country_render(request, ct_id):
+    country_id = Country.objects.get(country_id=eval(ct_id))
+    cities = City.objects.filter(country_id_id=eval(ct_id))
+    countries= Country.objects.all()
+    context = {'city': cities, 'ct': country_id,'count':countries}
+    return render(request, "country.html", context)
 

@@ -20,7 +20,7 @@ class City (models.Model):
     city_desc = models.CharField(max_length=500)
     city_img = models.ImageField(default="default.jpeg")
     city_rate = models.IntegerField(null=True)
-    country_id = models.ForeignKey(Country)
+    country_id = models.ForeignKey(Country, related_name='count')
 	
 
 
@@ -43,7 +43,7 @@ class Comments(models.Model):
    # user=models.ForeignKey(Users)
     city=models.ForeignKey(City)
     exp=models.ForeignKey(Experience)
-	
+
 
 
 
