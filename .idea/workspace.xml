@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="868aeb34-4525-46d3-963c-5cd632925185" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Django_lonelyplanet/home_site/static/Spain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django_lonelyplanet/home_site/static/Sweden.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django_lonelyplanet/home_site/template/aa.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django_lonelyplanet/home_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_lonelyplanet/home_site/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django_lonelyplanet/home_site/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_lonelyplanet/home_site/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Django_lonelyplanet/home_site/static/car.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Django_lonelyplanet/home_site/static/car.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Django_lonelyplanet/home_site/static/hotel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_lonelyplanet/Django_lonelyplanet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_lonelyplanet/Django_lonelyplanet/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_lonelyplanet/home_site/static/city/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/country.html" beforeDir="false" afterPath="$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/country.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/single_city.html" beforeDir="false" afterPath="$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/single_city.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,43 +23,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="165">
               <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/views.py">
+        <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/Django_lonelyplanet/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+              <caret line="24" selection-start-line="24" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/single_city.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="37" />
               <folding>
-                <element signature="e#0#59#0" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/template/single_city.html">
+        <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/country.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+            <state relative-caret-position="457">
+              <caret line="220" lean-forward="true" selection-start-line="162" selection-start-column="8" selection-end-line="220" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/template/index.html">
+        <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="62" selection-end-column="32" />
+            <state relative-caret-position="884">
+              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -64,18 +81,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/urls.py">
+        <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="195">
+              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
               <folding>
-                <element signature="e#653#685#0" expanded="true" />
+                <element signature="e#0#59#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>home</find>
+      <find>temp</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,27 +115,30 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Django_lonelyplanet/Django_lonelyplanet/settings.py" />
         <option value="$PROJECT_DIR$/Django_lonelyplanet/home_site/models.py" />
-        <option value="$PROJECT_DIR$/Django_lonelyplanet/home_site/template/index.html" />
         <option value="$PROJECT_DIR$/Django_lonelyplanet/home_site/template/index1.html" />
         <option value="$PROJECT_DIR$/Django_lonelyplanet/home_site/urls.py" />
         <option value="$PROJECT_DIR$/Django_lonelyplanet/home_site/views.py" />
+        <option value="$PROJECT_DIR$/Django_lonelyplanet/home_site/template/index.html" />
         <option value="$PROJECT_DIR$/Django_lonelyplanet/home_site/template/single_city.html" />
+        <option value="$PROJECT_DIR$/Django_lonelyplanet/Django_lonelyplanet/settings.py" />
+        <option value="$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/single_city.html" />
+        <option value="$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/country.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="77" />
     <option name="y" value="47" />
-    <option name="width" value="1279" />
-    <option name="height" value="701" />
+    <option name="width" value="1161" />
+    <option name="height" value="641" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,13 +175,12 @@
               <item name="ITI_Python_Django" type="462c0819:PsiDirectoryNode" />
               <item name="Django_lonelyplanet" type="462c0819:PsiDirectoryNode" />
               <item name="home_site" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="templetes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,17 +238,11 @@
     <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/Django_lonelyplanet/settings.py">
+    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/template/index1.html" />
+    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/template/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/template/index1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="47" column="83" lean-forward="true" selection-start-line="47" selection-start-column="83" selection-end-line="47" selection-end-column="83" />
+        <state relative-caret-position="177">
+          <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -223,49 +251,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="165">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/template/single_city.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/Django_lonelyplanet/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="e#653#685#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+        <state relative-caret-position="195">
+          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/template/index.html">
+    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/Django_lonelyplanet/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="62" selection-end-column="32" />
+        <state relative-caret-position="210">
+          <caret line="24" selection-start-line="24" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/template/single_city.html">
+    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/single_city.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+        <state relative-caret-position="135">
+          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="37" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_lonelyplanet/home_site/templetes/country.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="220" lean-forward="true" selection-start-line="162" selection-start-column="8" selection-end-line="220" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
