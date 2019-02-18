@@ -10,6 +10,8 @@ def newcar(request,city_id):
     car_form = CarForm()
     car_form.fields['location'].queryset = Sights.objects.filter(city_id = city_id)
     car_form.fields['location'].empty_label = "Select your location"
+    car_form.fields['destination'].queryset = Sights.objects.filter(city_id = city_id)
+    car_form.fields['destination'].empty_label = "Select your destination"
     if request.method == "POST":
         car_form = CarForm(request.POST)
         if car_form.is_valid():

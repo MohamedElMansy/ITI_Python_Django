@@ -16,6 +16,7 @@ class car(models.Model):
     from_time = models.TimeField(("Time"))
     to_date = models.DateField(("Date"))
     to_time = models.TimeField(("Time"))
+    destination = models.ForeignKey('home_site.Sights',related_name='car_destination')
 
 
     def __str__(self):

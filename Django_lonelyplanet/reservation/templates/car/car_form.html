@@ -10,6 +10,12 @@
                     {% csrf_token %} {{form.location.label_tag}}{{form.location}}
                 </div>
             </div>
+            <div class="row">
+                <!-- <div class=" col-xs-6 form-group "> -->
+                <div class="col-md">
+                    {{form.destination.label_tag}}{{form.destination}}
+                </div>
+            </div>
             <br>
             <div class="row">
                 <div class="col-md-6">
