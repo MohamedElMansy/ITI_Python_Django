@@ -1,0 +1,43 @@
+{% extends "car/base.html" %} {% load static %}{% block main_block %}
+
+<div class="bg-img">
+    <div class="container">
+        <form method="POST" class="col-md">
+            <h1>Car Rental</h1>
+            <div class="row">
+                <!-- <div class=" col-xs-6 form-group "> -->
+                <div class="col-md">
+                    {% csrf_token %} {{form.location.label_tag}}{{form.location}}
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    {{form.from_date.label_tag}}{{form.from_date}}
+                </div>
+                <!-- <div class="col-xs-6 form-group "> -->
+                <div class="col-md-6">
+                    {{form.from_time.label_tag}} {{form.from_time}}
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    {{form.to_date.label_tag}}{{form.to_date}}
+                </div>
+                <!-- <div class="col-xs-6 form-group "> -->
+                <div class="col-md-6">
+                    {{form.to_time.label_tag}} {{form.to_time}}
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary ">Save</button>
+                <button type="reset" class="btn btn-secondary ">Reset</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

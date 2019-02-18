@@ -20,4 +20,5 @@ from django.conf.urls import include
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home_site/', include('home_site.urls')),
+    url(r'^reservation/', include('reservation.urls')),
 ]
