@@ -1,9 +1,9 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
-from .forms import CarForm
-from .models import car
-from home_site.models import Country,City,Sights
+from .forms import CarForm,HotelForm
+from .models import car,hotel
+from home_site.models import Country,City,Sights,Hotels
 
 
 def newcar(request,city_id):
@@ -18,3 +18,18 @@ def newcar(request,city_id):
 
     context = {"form": car_form}
     return render(request, "car/car_form.html", context)
+
+
+def newhotel(request,city_id):
+    hotel_form = HotelForm()
+    hotel_form.fields['hotels'].queryset = Hotels.objects.filter(city_id = city_id)
+    hotel_form.fields['hotels'].empty_label = "Select your hotel"
+    hotel_form.fields['person_number'].empty_label = "Number of persons"
+    if request.method == "POST":
+        hotel_form = HotelForm(request.POST)
+        if hotel_form.is_valid():
+            hotel_form.save()
+            return HttpResponseRedirect(request.path_info)
+
+    context = {"form": hotel_form}
+    return render(request, "hotel/hotel_res.html", context)

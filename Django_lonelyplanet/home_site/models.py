@@ -58,6 +58,16 @@ class Comments(models.Model):
     city=models.ForeignKey(City)
     exp=models.ForeignKey(Experience)
 
+class Hotels(models.Model):
+    hotel_id=models.AutoField(primary_key=True)
+    hotel_name=models.CharField(max_length=200,null=False)
+    hotel_img=models.ImageField(default="default.jpeg")
+    hotel_img = models.FileField(storage=private_storage)
+    city=models.ForeignKey(City)
+
+    def __str__(self):
+        return self.hotel_name
+
 
 
 
