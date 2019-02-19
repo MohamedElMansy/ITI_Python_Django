@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
-
+from django.contrib.auth.models import User
 private_storage = FileSystemStorage(location=settings.STATIC_URL)
 
 
@@ -39,6 +39,9 @@ class Experience(models.Model):
     exp_description=models.CharField(max_length=250,null=False)
     exp_img=models.ImageField(default="default.jpeg")
     city=models.ForeignKey(City)
+    user=models.ForeignKey(User)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class Sights(models.Model):
 
@@ -54,9 +57,11 @@ class Sights(models.Model):
 class Comments(models.Model):
     comment_id=models.AutoField(primary_key=True)
     comment_description=models.CharField(max_length=250)
-   # user=models.ForeignKey(Users)
+    user=models.ForeignKey(User)
     city=models.ForeignKey(City)
     exp=models.ForeignKey(Experience)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class Hotels(models.Model):
     hotel_id=models.AutoField(primary_key=True)

@@ -27,6 +27,78 @@
 
     <link rel="stylesheet" href="{% static '../static/css/style.css'%}">
 
+    <style>
+
+
+
+        .detailBox {
+            width:500px;
+            border:1px solid #bbb;
+            margin:50px;
+        }
+        .titleBox {
+            background-color:#fdfdfd;
+            padding:10px;
+        }
+        .titleBox label{
+          color:#444;
+          margin:0;
+          display:inline-block;
+        }
+
+        .commentBox {
+            padding:10px;
+            border-top:1px dotted #bbb;
+        }
+        .commentBox .form-group:first-child, .actionBox .form-group:first-child {
+            width:80%;
+        }
+        .commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+            width:18%;
+        }
+        .actionBox .form-group * {
+            width:100%;
+        }
+        .taskDescription {
+            margin-top:10px 0;
+        }
+        .commentList {
+            padding:0;
+            list-style:none;
+            max-height:200px;
+            overflow:auto;
+        }
+        .commentList li {
+            margin:0;
+            margin-top:10px;
+        }
+        .commentList li > div {
+            display:table-cell;
+        }
+        .commenterImage {
+            width:30px;
+            margin-right:5px;
+            height:100%;
+            float:left;
+        }
+        .commenterImage img {
+            width:100%;
+            border-radius:50%;
+        }
+        .commentText p {
+            margin:0;
+        }
+        .sub-text {
+            color:#aaa;
+            font-family:verdana;
+            font-size:11px;
+        }
+        .actionBox {
+            border-top:1px dotted #bbb;
+            padding:10px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -148,50 +220,62 @@
 
         </div>
 
-        <div class="container bootstrap snippet">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="blog-comment">
-                        <h3 class="text-success">Comments</h3>
-                        <hr />
-                        <ul class="comments">
-                            <li class="clearfix">
-                                <img src="https://bootdey.com/img/Content/user_1.jpg" class="avatar" alt="">
-                                <div class="post-comments">
-                                    <p class="meta">Dec 18, 2014 <a href="#">JohnDoe</a> says : <i class="pull-right"><a
-                                                href="#"><small>Reply</small></a></i></p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a sapien odio, sit amet
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <img src="https://bootdey.com/img/Content/user_2.jpg" class="avatar" alt="">
-                                <div class="post-comments">
-                                    <p class="meta"> <a href="#">JohnDoe</a> says : <i class="pull-right"><a href="#"><small>Reply</small></a></i></p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a sapien odio, sit amet
-                                    </p>
-                                </div>
+        <!--{{ request.session.['user.id'] %}-->
+        <!--{{user.id}}-->
 
-                                <ul class="comments">
-                                    <li class="clearfix">
-                                        <img src="https://bootdey.com/img/Content/user_3.jpg" class="avatar" alt="">
-                                        <div class="post-comments">
-                                            <p class="meta"><a href="#">JohnDoe</a> says : <i class="pull-right"><a
-                                                        href="#"><small>Reply</small></a></i></p>
-                                            <p>
-                                                wonderful
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+
+        <h2 class="font-weight-light text-black text-center" style="padding-top: 5%">Articals</h2>
+        {% for exp in exps %}
+
+        <div class="detailBox">
+             <div class="commenterImage" style="margin-left:10px;">
+                      <img src="http://lorempixel.com/50/50/people/6" />
+                        <label> {{exp.user.username}}</label>
                     </div>
-                </div>
-            </div>
+        <div class="titleBox" style="">
+          <h3>{{exp.exp_title}}</h3>
+            <button type="button" class="close" aria-hidden="true">&times;</button>
         </div>
+        <div class="commentBox">
+             <img  src="https://i.redd.it/spo5q1n66gg11.jpg" style="width: 100%" />
+
+            <p class="taskDescription">{{exp.exp_description}}</p>
+        </div>
+        <div class="actionBox">
+            <ul class="commentList">
+                {% for comm in comms%}
+                {% if comm.exp.exp_id == exp.exp_id %}
+                <li>
+                    <div class="commenterImage">
+                      <img src="http://lorempixel.com/50/50/people/6" />
+                    </div>
+                    <div class="commentText">
+
+                        <p class="">{{comm.comment_description}}</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                    </div>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            <form class="form-inline" role="form" method="post">
+                {% csrf_token %}
+                 {{st_form.as_p}}
+
+                <div class="form-group">
+                    <input class="form-control" type="text" name="comment" placeholder="Your comments" />
+                    <input type="hidden" name="id" value="{{user.id}}">
+                    <input type="hidden" name="exp" value="{{exp.exp_id}}">
+                    <input type="hidden" name="city" value="{{exp.city_id}}">
+
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Add</button>
+                </div>
+            </form>
+         </div>
+        </div>
+        {% endfor %}
 
         <h2 class="font-weight-light text-black text-center" style="padding-top: 5%">Get a Ride</h2>
 
