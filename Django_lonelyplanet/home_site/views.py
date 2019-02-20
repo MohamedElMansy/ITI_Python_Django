@@ -16,6 +16,7 @@ def show_city(request,city_id):
     all_comments=Comments.objects.filter(city_id=city_id).select_related('user').select_related('exp')
     context = {'city': single_city,'sights':sight,'countries': all_countris ,'exps':all_exp,'comms':all_comments}
     add_comment(request)
+    add_exp(request,city_id)
     return render(request, 'single_city.html', context)
 
 def add_comment(request):
@@ -28,6 +29,20 @@ def add_comment(request):
             comm.city_id = request.POST.get('city')
             comm.exp_id = request.POST.get('exp')
             comm.save()
+
+
+def add_exp(request,city_id):
+    if request.method=='POST':
+        if request.POST.get('comment') and request.POST.get('img') \
+                and request.POST.get('title') and request.POST.get('id'):
+            exp = Experience()
+            exp.exp_title = request.POST.get('title')
+            exp.exp_description = request.POST.get('comment')
+            exp.user_id = request.POST.get('id')
+            exp.city_id = city_id
+            exp.exp_img = request.POST.get('img')
+            exp.save()
+
 
 
 
