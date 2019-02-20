@@ -4,8 +4,9 @@ from .models import Country,City,Experience,Comments,Sights,User
 
 # Create your views here.
 def index(request):
-    all_countris=Country.objects.all().order_by('country_rate')[:6]
-    context = {'countries': all_countris}
+    all_countris=Country.objects.all().order_by('-country_rate')[:6]
+    top_cities = City.objects.all().order_by('-city_rate')[:6]
+    context = {'countries': all_countris ,'cities':top_cities}
     return render(request, 'index.html', context)
 
 def show_city(request,city_id):

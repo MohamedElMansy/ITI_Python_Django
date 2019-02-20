@@ -129,11 +129,34 @@
         </div>
       </div>  
       {% endfor %}
-
-
-          
     </div>
 
+
+        <h2 class="font-weight-light text-black text-center" style="padding-top: 5%">Top Cities </h2>
+
+        <div class="site-section">
+
+            <div class="container">
+
+                <div class="row">
+
+                    {% for city in cities %}
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                        <a class="unit-1 text-center" href="/home_site/city/{{city.city_id}}">
+                            <img src="{{ baseUrl }}/{{city.city_img}}" alt="Image" class="img-fluid">
+                            <div class="unit-1-text">
+
+                                <h3 class="unit-1-heading">{{city.city_name}}</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+
+        </div>
 
   </div>
 
