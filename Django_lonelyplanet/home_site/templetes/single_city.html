@@ -357,6 +357,8 @@
 
         </div>
 
+
+
         <!--{{ request.session.['user.id'] %}-->
         <!--{{user.id}}-->
         <!--{{ request.GET.city_id }}-->
@@ -400,6 +402,7 @@
 
 
             </ul>
+            {% if request.user.is_authenticated %}
             <form class="form-inline" role="form" method="post">
                 {% csrf_token %}
                  {{st_form.as_p}}
@@ -415,10 +418,13 @@
                     <button type="submit" class="btn btn-default">Add</button>
                 </div>
             </form>
+            {% endif %}
          </div>
         </div>
         {% endfor %}
 
+
+        {% if request.user.is_authenticated %}
 
         <h2 class="font-weight-light text-black text-center" style="padding-top: 5%">Talk About your Experience</h2>
 
@@ -453,6 +459,9 @@
             </div>
             </div>
             </div>
+
+
+
 
         <h2 class="font-weight-light text-black text-center" style="padding-top: 5%">Get a Ride</h2>
 
@@ -490,7 +499,7 @@
             </div>
         </div>
 
-
+    {% endif%}
     </div>
 
 
