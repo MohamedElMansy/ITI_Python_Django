@@ -1,7 +1,7 @@
 {% extends "hotel/base.html" %} {% load static %}{% block main_block %}
-
 <div class="hotel-img">
     <div class="hotel-container">
+        {% if request.user.is_authenticated %}
         <form method="POST" class="col-md">
             <h1>Hotel Reservation</h1>
             <div class="row">
@@ -13,7 +13,7 @@
             <br>
             <div class="row">
                 <div class="col-md-6">
-                    {{form.from_date.label_tag}}{{form.from_date}}
+                    <input type="hidden" name="id" value="{{user.id}}"> {{form.from_date.label_tag}}{{form.from_date}}
                 </div>
                 <!-- <div class="col-xs-6 form-group "> -->
                 <div class="col-md-6">
@@ -44,8 +44,8 @@
             </div>
 
         </form>
+        {% endif %}
     </div>
 </div>
-
 
 {% endblock %}
