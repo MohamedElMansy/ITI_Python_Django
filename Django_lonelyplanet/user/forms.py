@@ -19,3 +19,18 @@ class ImgForm(forms.ModelForm):
     class Meta:
         model = User_custom
         fields = ('user_img',)
+
+
+class EditForm(UserCreationForm):
+    name = forms.CharField(max_length=30, required=True, help_text='Required.')
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+
+    class Meta:
+        model = User
+        fields = ('name', 'email','username')
+
+class ImgFormEdit(forms.ModelForm):
+
+    class Meta:
+        model = User_custom
+        fields = ('user_img',)

@@ -19,6 +19,9 @@ from user import views
 
 urlpatterns = [
       url(r'^signup$', views.signup, name="signup"),
+      url(r'^edit$', views.edit, name="edit"),
       url(r'^login$', auth.login, name="login"),
+      url(r'^profile', views.user_data, name='profile'),
+      url(r'^logout', views.user_logout, name='logout'),
 
 ]

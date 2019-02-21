@@ -267,7 +267,7 @@
                                     <a href="/home_site">Home</a>
                                 </li>
                                 <li class="has-children">
-                                    <a href="destination.html">Destinations</a>
+                                    <a >Destinations</a>
                                     <ul class="dropdown">
                                         {% for country in countries %}
 
@@ -276,11 +276,15 @@
                                     </ul>
                                 </li>
 
-                                <li><a>Discount</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="blog.html">Blog</a></li>
+                                    {% if request.user.is_authenticated %}
+                                <li><a href="/user/profile">profile</a></li>
+                                <li><a href="/user/logout">logout</a></li>
 
-                               <li><a href="{% url 'login' %}">Login</a></li>
+                                {% endif %}
+                                <!--<li><a href="blog.html">Blog</a></li>-->
+                                {% if not request.user.is_authenticated %}
+                                <li><a href="{% url 'login' %}">Login</a></li>
+                                {% endif %}
                             </ul>
                         </nav>
                     </div>

@@ -1,16 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load staticfiles %}
+  {% static "" as baseUrl %}
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
-</form>
+<meta charset="utf-8">
 
-</body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="{% static '../static/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static '../static/css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static '../static/css/jquery-ui.css'%}">
+    <link rel="stylesheet" href="{% static '../static/css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static '../static/css/owl.theme.default.min.css'%}">
+</head>
+<body style= "background-image: url({{ baseUrl }}/images/sign.jpg);  background-size: cover;
+ background-repeat: no-repeat;
+">
+ <div style="margin-top:150px;width:500px;" class="container">
+    <h1 >  <span class="label label-default"> Login </span></h1>
+<div >
+</div>
+      <form class="form-signin" action="" method="post" id="login-form">{% csrf_token %}
+        <h2 class="form-signin-heading">{{ message }}</h2>
+        <label for="id_username" class="sr-only">Email address</label>
+        <input type="text" name="username" id="id_username" class="form-control" placeholder="User Name" required autofocus>
+        <label for="id_password" class="sr-only">Password</label>
+        <input type="password" name="password" id="id_password" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button style="width=40px;" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <p style="margin-top:250px;margin-right:150px;color:blue; font-size:18px;">  Donot Have An Account <a class="btn btn-secondary btn-lg active" role="button" href="/user/signup" > Signup  </a> </p>
+
+      </form>
+
+    </div> <!-- /container -->
+
+
+  <script src="{% static '../static/js/bootstrap.min.js'%}"></script>
+
+  <script src="{% static '../static/js/main.js'%}"></script></body>
 </html>

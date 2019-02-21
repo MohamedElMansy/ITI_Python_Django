@@ -122,4 +122,4 @@ USE_TZ = True
 STATIC_URL = os.path.join(BASE_DIR, 'home_site/static/')
 
 # my_project/settings.py
-LOGIN_REDIRECT_URL = '/home_site'
+LOGIN_REDIRECT_URL = '/user/profile'

@@ -18,7 +18,10 @@ class car(models.Model):
     to_date = models.DateField(("Date"))
     to_time = models.TimeField(("Time"))
     destination = models.ForeignKey('home_site.Sights',related_name='car_destination')
-    user = models.ForeignKey(User)
+    user=models.ForeignKey(User)
+    city=models.ForeignKey(City)
+    country = models.ForeignKey(Country)
+
 
 
     def __str__(self):
@@ -32,6 +35,8 @@ class hotel(models.Model):
     to_date = models.DateField(("Date"))
     person_number = models.IntegerField(default="1")
     user=models.ForeignKey(User)
+    city=models.ForeignKey(City)
+    country = models.ForeignKey(Country)
 
 
     def __str__(self):

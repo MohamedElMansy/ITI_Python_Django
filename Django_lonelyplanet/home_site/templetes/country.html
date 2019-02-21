@@ -59,7 +59,7 @@
                   <a href="/home_site">Home</a>
                 </li>
                 <li class="has-children">
-                  <a href="destination.html">Destinations</a>
+                  <a >Destinations</a>
                   <ul class="dropdown">
 
                     {% for count in count %}
@@ -71,12 +71,15 @@
                   </ul>
                 </li>
 
-                <li><a href="discount.html">Discount</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                   {% if request.user.is_authenticated %}
+                <li><a href="/user/profile">profile</a></li>
+                <li><a href="/user/logout">logout</a></li>
 
+                {% endif %}
+                <!--<li><a href="blog.html">Blog</a></li>-->
+                {% if not request.user.is_authenticated %}
                 <li><a href="{% url 'login' %}">Login</a></li>
-                <!-- <li><a href="booking.html">Book Online</a></li> -->
+                {% endif %}
               </ul>
             </nav>
           </div>
