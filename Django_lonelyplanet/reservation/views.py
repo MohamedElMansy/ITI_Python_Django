@@ -28,11 +28,16 @@ def newhotel(request,city_id):
     hotel_form.fields['hotels'].queryset = Hotels.objects.filter(city_id = city_id)
     hotel_form.fields['hotels'].empty_label = "Select your hotel"
     hotel_form.fields['person_number'].empty_label = "Number of persons"
+    hotel_form.fields['user'].empty_label= request.POST.get('id')
     if request.method == "POST":
-        hotel.objects.create(user=request.POST['id'])
+        hotel=Hotels()
+        hotel.hotel_id=request.POST.get('id')
+       # hotel.objects.create(user=request.POST['id'])
         hotel_form = HotelForm(request.POST)
         if hotel_form.is_valid():
+         #       hotel.save()
                 hotel_form.save()
+
                 return HttpResponseRedirect(request.path_info)
     context = {"form": hotel_form}
     return render(request, "hotel/hotel_res.html", context)

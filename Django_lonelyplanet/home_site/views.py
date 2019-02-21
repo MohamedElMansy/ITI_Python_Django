@@ -2,6 +2,7 @@ from django.http import HttpResponse , HttpResponseRedirect
 from django.shortcuts import render
 from .models import Country,City,Experience,Comments,Sights,User
 
+
 # Create your views here.
 def index(request):
     all_countris=Country.objects.all().order_by('-country_rate')[:6]
@@ -14,7 +15,7 @@ def show_city(request,city_id):
     single_city=City.objects.get(city_id = city_id)
     sight = Sights.objects.filter(city_id=city_id)
     all_exp = Experience.objects.filter(city_id=city_id).select_related('user')
-    all_comments=Comments.objects.filter(city_id=city_id).select_related('user').select_related('exp')
+    all_comments=Comments.objects.filter(city_id=city_id).select_related('user')
     context = {'city': single_city,'sights':sight,'countries': all_countris ,'exps':all_exp,'comms':all_comments}
     add_comment(request)
     add_exp(request,city_id)

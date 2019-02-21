@@ -271,7 +271,7 @@
                                     <ul class="dropdown">
                                         {% for country in countries %}
 
-                                        <li><a href="/home_site/{{country.country_id}}">{{country.country_name}}</a></li>
+                                        <li><a href="/home_site/country/{{country.country_id}}">{{country.country_name}}</a></li>
                                         {% endfor %}
                                     </ul>
                                 </li>
@@ -368,11 +368,11 @@
 
         <div class="detailBox">
              <div class="commenterImage" style="margin-left:10px;">
-                      <img src="{{ baseUrl }}/person_4.jpg" />
+                      <img src="{{ baseUrl }}/{{exp.user.user_custom.user_img}}" />
                         <label> {{exp.user.username}}</label>
                     </div>
         <div class="titleBox" style="">
-          <h3>{{exp.exp_title}}</h3>
+          <h3 style="margin-left: 20%;">{{exp.exp_title}}</h3>
             <button type="button" class="close" aria-hidden="true">&times;</button>
         </div>
         <div class="commentBox">
@@ -386,7 +386,7 @@
                 {% if comm.exp.exp_id == exp.exp_id %}
                 <li>
                     <div class="commenterImage">
-                      <img src="http://lorempixel.com/50/50/people/6" />
+                      <img src="{{ baseUrl }}/{{comm.user.user_custom.user_img}}" />
                     </div>
                     <div class="commentText">
 

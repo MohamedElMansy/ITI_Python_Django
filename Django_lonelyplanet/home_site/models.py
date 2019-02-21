@@ -75,5 +75,3 @@ class Hotels(models.Model):
 
 
 
-
-

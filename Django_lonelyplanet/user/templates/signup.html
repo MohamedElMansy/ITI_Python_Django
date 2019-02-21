@@ -17,6 +17,13 @@
         {% endfor %}
       </p>
     {% endfor %}
+
+    {% for field in form2 %}
+        {{ field.label_tag }}<br>
+        {{ field }}
+
+    {% endfor%}
+
     <button type="submit">Sign up</button>
   </form>
 </body>

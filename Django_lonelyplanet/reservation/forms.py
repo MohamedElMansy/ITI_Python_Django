@@ -31,12 +31,13 @@ class CarForm(forms.ModelForm):
 class HotelForm(forms.ModelForm):
     class Meta:
         model = hotel
-        fields = ['from_date','hotels','to_date','person_number']
+        fields = ['from_date','hotels','to_date','person_number','user']
         widgets = {
             'from_date': forms.DateTimeInput(attrs={'placeholder':'From','id': 'datepicker1','width':'200px'}),
             'to_date': forms.DateTimeInput(attrs={'placeholder':'To','id': 'datepicker2','width':'200px'}),
             'hotels':forms.Select(choices=HOTELS,attrs={'class':'form-control'}),
-            'person_number':forms.Select(choices=PERSONS,attrs={'class':'form-control'})
+            'person_number':forms.Select(choices=PERSONS,attrs={'class':'form-control'}),
+            'user':forms.NumberInput()
         }
 
         
