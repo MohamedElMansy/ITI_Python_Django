@@ -1,6 +1,7 @@
 from django.http import HttpResponse , HttpResponseRedirect
 from django.shortcuts import render
 from .models import Country,City,Experience,Comments,Sights,User
+from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
@@ -59,11 +60,8 @@ def search(request):
     if request.method == 'GET':
          if request.GET.get('search'):
             searched_city= request.GET.get('search')
-            #cities =City.objects.filter(city_name__icontains = searched_city)
+            city_get=get_object_or_404(City,city_name=searched_city)
 
-            city_get=City.objects.get(city_name=searched_city)
-
-            # print(mm.city_id)
             context={'city':city_get}
 
             return render(request,"search.html",context)

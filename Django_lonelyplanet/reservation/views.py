@@ -40,8 +40,6 @@ def newhotel(request,city_id):
     hotel_form.fields['hotels'].empty_label = "Select your hotel"
     hotel_form.fields['person_number'].empty_label = "Number of persons"
     if request.method == "POST":
-        # hotel.objects.create(user=request.POST.get('id'))
-        # hotel.user = User.objects.get(id = request.POST.get('id'))
         hotel_form = HotelForm(request.POST)
         if hotel_form.is_valid():
                 reserv = hotel_form.save(commit=False)

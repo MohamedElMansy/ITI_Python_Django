@@ -77,7 +77,6 @@
                 <li><a href="/user/logout">logout</a></li>
 
                 {% endif %}
-                <!--<li><a href="blog.html">Blog</a></li>-->
                 {% if not request.user.is_authenticated %}
                 <li><a href="{% url 'login' %}">Login</a></li>
                 {% endif %}
