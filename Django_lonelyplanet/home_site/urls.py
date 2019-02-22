@@ -19,6 +19,7 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^city/(?P<city_id>[0-9]+)$', views.show_city),
     url(r'^country/(?P<ct_id>[0-9]+)$', views.country_render, name="country"),
+    url(r'^search', views.search, name="search"),
 
 
 ]

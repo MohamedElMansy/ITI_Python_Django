@@ -47,9 +47,6 @@ def add_exp(request,city_id):
 
 
 
-
-
-
 def country_render(request, ct_id):
     country_id = Country.objects.get(country_id=eval(ct_id))
     cities = City.objects.filter(country_id_id=eval(ct_id))
@@ -57,3 +54,16 @@ def country_render(request, ct_id):
     context = {'city': cities, 'ct': country_id,'count':countries}
     return render(request, "country.html", context)
 
+
+def search(request):
+    if request.method == 'GET':
+         if request.GET.get('search'):
+            searched_city= request.GET.get('search')
+            #cities =City.objects.filter(city_name__icontains = searched_city)
+
+            city_get=City.objects.get(city_name=searched_city)
+
+            # print(mm.city_id)
+            context={'city':city_get}
+
+            return render(request,"search.html",context)
